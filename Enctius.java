@@ -19,18 +19,40 @@ class Person{
         System.out.println("Last Name:"+name2);
     }
     public void age(){
+        if(age>=22){
+            System.out.println(name1+"is student");
+        }else{
+            System.out.println(name1+"graduatestudent");
+        }
         System.out.println("age:"+age);
     }
     public void Email(){
         System.out.println("Email is"+email);
 }
 }
+class graduatestudent extends Person{
+    
+    String projectTitle;
+    public void projectTitle(){
+        System.out.println("projectTitle:"+ projectTitle);
+       
+    }
+}
 class students extends Person{
-    public void Student(){
+    
+    int id;
+    
+    public void studentId(){
          System.out.println(name1+"is student");
     
+    
 }
+    public void id(){
+          System.out.println("ID:"+id);
+    }
+   
 }
+
 public class Enctius {
 
     /**
@@ -40,15 +62,22 @@ public class Enctius {
         students s=new students();
         s.name1="George";
         s.name2="magdy";
-        s.age=20;
+        s.age=22;
         s.email="GEo@.com";
+        s.id=12155; 
+       
         s.firstname();
         s.lastname();
         s.Email();
         s.age();
-        s.Student();
+        s. studentId();
+        s.id();
+        graduatestudent g=new graduatestudent();
+        g.projectTitle="make project";
+        g.projectTitle();
       
         
     }
     
 }
+
